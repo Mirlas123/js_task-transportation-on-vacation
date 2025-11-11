@@ -21,4 +21,6 @@ function calculateRentalCost(days) {
   return days * CAR_COST;
 }
 
+
+
 module.exports = calculateRentalCost;
