@@ -4,20 +4,21 @@
  * @return {number}
  */
 function calculateRentalCost(days) {
-  const longt = 7;
-  const longdisk = 50;
-  const smallt = 3;
-  const smalltdisk = 20;
+  const LONG_TERM_DAYS_THRESHOLD = 7;
+  const LONG_TERM_DISCOUNT = 50;
+  const SMALL_TERM_DAYS_THRESHOLD = 3;
+  const SMALL_TERM_DISCOUNT = 20;
+  const CAR_COST = 40;
 
-  if (days >= longt) {
-    return days * 40 - longdisk;
+  if (days >= LONG_TERM_DAYS_THRESHOLD) {
+    return days * CAR_COST - LONG_TERM_DISCOUNT;
   }
 
-  if (days >= smallt) {
-    return days * 40 - smalltdisk;
+  if (days >= SMALL_TERM_DAYS_THRESHOLD) {
+    return days * CAR_COST - SMALL_TERM_DISCOUNT;
   }
 
-  return days * 40;
+  return days * CAR_COST;
 }
 
 module.exports = calculateRentalCost;
